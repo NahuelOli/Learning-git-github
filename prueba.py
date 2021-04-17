@@ -1,6 +1,8 @@
 def run():
-    texto = input("Escriba una frase: ")
-    print(texto)
+    palabra = input("Escriba una palabra: ")
+    print(palabra)
+    
+
 
 
 if __name__ == "__main__":
