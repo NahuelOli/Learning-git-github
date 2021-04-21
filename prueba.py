@@ -1,6 +1,6 @@
 def run():
-
-
+    print("""Bienvenido a 'Es capicua?'
+    """)
     palabra = input("Escriba una palabra o un numero: ")
     palabra = palabra.replace (" ", "")
     palabra_invertida = palabra[::-1]
