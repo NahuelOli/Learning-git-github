@@ -3,10 +3,9 @@ def run():
     palabra = palabra.replace (" ", "")
     palabra_invertida = palabra[::-1]
     if palabra == palabra_invertida:
-        print("Es palindromo.")
+        print("Es capicua.")
     else:
-        print("No es palindromo.")
-
+        print("No es capicua.")
 
 
 if __name__ == "__main__":
