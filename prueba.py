@@ -1,6 +1,6 @@
 def run():
-    print("""'Bienvenido al averiguador capicua'   
-    """)
+   
+   
     palabra = input("Escriba una palabra: ")
     palabra = palabra.replace (" ", "")
     palabra_invertida = palabra[::-1]
