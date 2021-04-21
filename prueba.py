@@ -9,7 +9,5 @@ def run():
     else:
         print("No es capicua.")
 
-
-
 if __name__ == "__main__":
     run()
