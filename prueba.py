@@ -5,9 +5,9 @@ def run():
     palabra = palabra.replace (" ", "")
     palabra_invertida = palabra[::-1]
     if palabra == palabra_invertida:
-        print("Es palindromo.")
+        print("Es .")
     else:
-        print("No es palindromo.")
+        print("No es .")
 
 
 
