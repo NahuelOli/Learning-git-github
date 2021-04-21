@@ -1,13 +1,13 @@
 def run():
-   
-   
-    palabra = input("Escriba una palabra: ")
+
+
+    palabra = input("Escriba una palabra o un numero: ")
     palabra = palabra.replace (" ", "")
     palabra_invertida = palabra[::-1]
     if palabra == palabra_invertida:
-        print("Es .")
+        print("Es capicua.")
     else:
-        print("No es .")
+        print("No es capicua.")
 
 
 
