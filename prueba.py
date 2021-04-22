@@ -1,5 +1,6 @@
 def run():
-    print("""Bienvenido a 'Es capicua?'
+    print("""
+    Bienvenido a 'Es capicua?'
     """)
     palabra = input("Escriba una palabra o un numero: ")
     palabra = palabra.replace (" ", "")
@@ -7,7 +8,18 @@ def run():
     if palabra == palabra_invertida:
         print("Es capicua.")
     else:
-        print("No es capicua.")
+        print("Es capicua.")
+    
+    
+    print("""
+    Bienvenido a 'par o impar'
+    """)
+    numero = int(input("Escribe un numero: "))
+    if numero % 2 == 0:
+        print("El numero " + str(numero) + " es par.")
+    else:
+        print("El numero " + str(numero) + " es impar.")
+
 
 if __name__ == "__main__":
     run()
