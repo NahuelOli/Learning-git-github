@@ -1,2 +1,2 @@
 # Learning-git-github
-Just learning how to code, nothing importatn to see.
+Just learning how to code, nothing important to see.
