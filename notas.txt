@@ -1,0 +1,1 @@
+git remote add <nombre del branch remoto> <URL del repositorio remoto>
