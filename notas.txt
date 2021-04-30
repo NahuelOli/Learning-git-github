@@ -1,5 +1,5 @@
 git remote add <nombre del branch remoto> <URL del repositorio remoto>
-
+_________________________________________________________________________
 "Forks o Bifurcaciones"
 Es una característica única de GitHub en la que se crea una copia exacta del estado actual de un repositorio directamente en GitHub, éste repositorio podrá servir como otro origen y se podrá clonar (como cualquier otro repositorio), en pocas palabras, lo podremos utilizar como un git cualquiera
 .
@@ -25,3 +25,8 @@ Al crear un remoto adicional podremos, hacer pull desde el nuevo origen (en caso
 
 [git pull upstream master]
 [git push origin master]
+___________________________________________________________________________
+
+rebase reescribe la historia del repositorio, cambia la historia de donde comenzó la rama y solo debe ser usado de manera local.
+___________________________________________________________________________
+
