@@ -8,7 +8,7 @@ def run():
     if palabra == palabra_invertida:
         print("Es capicua.")
     else:
-        print("Es capicua.")
+        print("No es capicua.")
     
     
     print("""
