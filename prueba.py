@@ -19,15 +19,14 @@ def run():
         print("El numero " + str(numero) + " es par.")
     else:
         print("El numero " + str(numero) + " es impar.")
-    
+
 
     print("""
-    Hola pendejo qlo, 
-    este es un mensaje bien chingon 
-    para que te rias 
-    al final del programa 
-    jejeje
-    """)
+    Como te llamas?""")
+    nombre = input("")
+    print("""
+    Hola """ + nombre + "yo me llamo Agatha.")
+    
 
 if __name__ == "__main__":
     run()
