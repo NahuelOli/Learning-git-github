@@ -105,4 +105,26 @@ Consideraciones:
 El cambio más reciente (al crear un stash) SIEMPRE recibe el valor 0 y los que estaban antes aumentan su valor.
 Al crear un stash tomará los archivos que han sido modificados y eliminados. Para que tome un archivo creado es necesario agregarlo al Staging Area con git add [nombre_archivo] con la intención de que git tenga un seguimiento de ese archivo, o también utilizando el comando git stash -u (que guardará en el stash los archivos que no estén en el staging).
 Al aplicar un stash este no se elimina, es buena práctica eliminarlo.
+___________________________________________________________________________
 
+"Cherry Pick"
+Este comando permite coger uno o varios commits de otra rama sin tener que hacer un merge completo. Así, gracias a cherry-pick, podríamos aplicar los commits relacionados con nuestra funcionalidad de Facebook en nuestra rama master sin necesidad de hacer un merge.
+
+Para demostrar cómo utilizar git cherry-pick, supongamos que tenemos un repositorio con el siguiente estado de rama:
+
+a - b - c - d   Master
+         \
+           e - f - g Feature
+El uso de git cherry-pick es sencillo y se puede ejecutar de la siguiente manera:
+
+git checkout master
+En este ejemplo, commitSha es una referencia de confirmación. Puedes encontrar una referencia de confirmación utilizando el comando git log. En este caso, imaginemos que queremos utilizar la confirmación ‘f’ en la rama master. Para ello, primero debemos asegurarnos de que estamos trabajando con esa rama master.
+
+<git cherry-pick f>
+
+Una vez ejecutado, el historial de Git se verá así:
+
+a - b - c - d - f   Master
+         \
+           e - f - g Feature
+La confirmación f se ha sido introducido con éxito en la rama de funcionalidad
