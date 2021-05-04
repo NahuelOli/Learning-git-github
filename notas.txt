@@ -189,3 +189,7 @@ git merge: Puedes hacer merge de un commit en específico, funciona igual que co
 
 git checkout master
 git merge eff544f # Fusionará en un nuevo commit la historia de master con el momento específico en el que vive eff544f
+
+ES UNA MALA PRACTICA, SOLO USAR EN CASO DE EMERGENCIA!!!
+
+____________________________________________________________________________________
