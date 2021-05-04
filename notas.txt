@@ -128,3 +128,40 @@ a - b - c - d - f   Master
          \
            e - f - g Feature
 La confirmación f se ha sido introducido con éxito en la rama de funcionalidad
+_________________________________________________________________________
+
+el commit --amend es muy util, pero hay que tener cuidado en algunos casos, como en el caso de que el commit que quieras enmendar lo hayas pusheado al repositorio remoto, entonces quieras enmendar un commit que esta en remoto.
+
+Así como en el caso de cherry-pick y rebase, hay que usarlo con cuidado porque modificará la historia de tu repositorio.
+
+Digamos que haces un cambio al archivo a.txt y haces un commit.
+
+Luego subes ese commit al repositorio haciendo push.
+
+Pero se te olvido agregar cambios a ese commit y quieres enmendarlo.
+
+Haces un git --amend y en la historia de tu repositorio local, pareciera que no ha pasado nada: enmendaste tu commit.
+
+Pero resulta que en el repositorio remoto eso no ha ocurrido, ese git --amend no tuvo lugar en el repositorio remoto, 
+y al hacer git status te mostrará un error así:
+
+Your branch and 'origin/master' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" to merge the remote branch into yours)
+y al momento de hacer push para sobreescribirlo, te aparecerá este error:
+
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'git@github.com:luisxxor/hyperblog-1.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+Y tendrás que hacer git pull para mergear los cambios de tu repositorio remoto y finalmente hacer push.
+Es decir, se puede hacer, pero sería contraproducente, porque la idea del amend era enmendar un sólo commit y no generar commits adicionales,
+pero el resultado de continuar haciendolo en éste caso es que tienes:
+
+1.   El primer commit
+2.   El commit enmendado
+3.   Y el commit del merge
+
+ES UNA MALA PRACTICA ENMENDAR UN COMMIT QUE YA FUE ENVIADO AL REPOSITORIO REMOTO.
